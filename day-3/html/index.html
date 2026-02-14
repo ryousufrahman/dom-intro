@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="email" placeholder="write your mail">
+        <br>
+        <input type="password" placeholder="write your password"><br>
+        <button type="button" onclick="onClickBg()">Submit</button>
+    </form>
+    <form action="">
+        <input type="email" placeholder="write your mail">
+        <br>
+        <input type="password" placeholder="write your password"><br>
+        <button type="button" id="make-blue">Submit</button>
+    </form>
+
+    <script>
+      const makeBlue = document.getElementById('make-blue');
+
+      makeBlue.onclick = function makeBlueFunction() {
+        document.body.style.backgroundColor='blue';
+        
+       }
+        
+      
+        
+       
+
+    </script>
+
+    <script src="../js/onclik.js"></script>
+</body>
+</html>
