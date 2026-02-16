@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product{
+            border: 2px solid black;
+            padding: 20px;
+        }
+        .products{
+            display: flex;
+            gap: 20px;
+        }
+        #product-section{
+            height: 50%;
+            display: flex;
+            justify-content: center;
+           
+            
+            
+        }
+        
+    </style>
+</head>
+<body>
+<section id="product-section">
+   <div class="products">
+         
+        <div class="product">
+            <img src="#" alt="">
+            <h1 class="productName">Smart Watch</h1>
+            <p class="brandName">Samsung</p>
+            <p class="productPrice">50$</p>
+            <button class="Wish-list-btn">Add To Wish List</button>
+            <button class="buy-now-btn">Buy Now</button>
+
+         </div>
+         <div class="product">
+            <img src="#" alt="">
+            <h1 class="productName">Smart Watch</h1>
+            <p class="brandName">Samsung</p>
+            <p class="productPrice">50$</p>
+            <button class="Wish-list-btn">Add To Wish List</button>
+            <button class="buy-now-btn">Buy Now</button>
+
+         </div>
+         <div class="product">
+            <img src="#" alt="">
+            <h1 class="productName">Smart Watch</h1>
+            <p class="brandName">Samsung</p>
+            <p class="productPrice">50$</p>
+            <button class="Wish-list-btn">Add To Wish List</button>
+            <button class="buy-now-btn">Buy Now</button>
+
+         </div>
+
+    </div>
+    
+</section>
+
+<script>
+     const buttons = document.querySelectorAll('.buy-now-btn');
+   const output =[];
+
+     buttons.forEach(btn=>{
+      btn.addEventListener('click', function(e){
+        const card = e.target.closest('.product')
+         const productName = card.querySelector('.productName').innerText;
+         const brandName = card.querySelector('.brandName').innerText;
+         const productPrice = card.querySelector('.productPrice').innerText;
+         
+         
+         
+      })
+     })
+</script>
+
+</body>
+</html>
