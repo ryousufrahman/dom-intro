@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete</title>
+</head>
+<body>
+    <h1 id="name">Yousuf Rahman</h1>
+    <textarea name="" id="text"></textarea>
+    <button id="btn" disabled >delete</button>
+
+    <script>
+     document.getElementById('text').addEventListener('keyup',function(event){
+        const textFromKey = event.target.value;
+        const textGlobal = textFromKey.toLowerCase();
+        const btnEnable = document.getElementById('btn')
+        const nameOf =document.getElementById('name');
+        if(textGlobal ==='delete'){
+           btnEnable.removeAttribute('disabled')
+           nameOf.style.display ='none'
+            
+        }
+        else{
+            btnEnable.setAttribute('disabled',true)
+            nameOf.style.display ='block'
+        }
+     })
+
+    </script>
+    
+</body>
+</html>
