@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class-color</title>
+</head>
+<body>
+    <h1 id="header">Example of changing style through class</h1>
+
+    <p class="paragraph">lorem5</p>
+    <p class="paragraph">lorem5</p>
+    <p class="paragraph">lorem5</p>
+    <p class="paragraph">lorem5</p>
+    <p class="paragraph">lorem5</p>
+
+    <script>
+
+        const para = document.getElementsByClassName('paragraph')
+        for(let p of para){
+            p.style.color ='green'
+            p.style.fontSize ='2rem'
+        }
+        const headerText = document.getElementById('header')
+        headerText.style.backgroundColor='red'
+        headerText.style.padding ='10px'
+    </script>
+</body>
+</html>
