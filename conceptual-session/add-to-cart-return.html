@@ -30,9 +30,9 @@
          
         <div class="product">
             <img src="#" alt="">
-            <h1 class="productName">Smart Watch</h1>
-            <p class="brandName">Samsung</p>
-            <p class="productPrice">50$</p>
+            <h1 class="productName">mobile</h1>
+            <p class="brandName">apple</p>
+            <p class="productPrice">500$</p>
             <button class="Wish-list-btn">Add To Wish List</button>
             <button class="buy-now-btn">Buy Now</button>
 
@@ -48,9 +48,9 @@
          </div>
          <div class="product">
             <img src="#" alt="">
-            <h1 class="productName">Smart Watch</h1>
-            <p class="brandName">Samsung</p>
-            <p class="productPrice">50$</p>
+            <h1 class="productName">earphone</h1>
+            <p class="brandName">sony</p>
+            <p class="productPrice">20$</p>
             <button class="Wish-list-btn">Add To Wish List</button>
             <button class="buy-now-btn">Buy Now</button>
 
@@ -63,19 +63,41 @@
 <script>
      const buttons = document.querySelectorAll('.buy-now-btn');
    const output =[];
+   
 
      buttons.forEach(btn=>{
       btn.addEventListener('click', function(e){
         const card = e.target.closest('.product')
          const productName = card.querySelector('.productName').innerText;
          const brandName = card.querySelector('.brandName').innerText;
-         const productPrice = card.querySelector('.productPrice').innerText;
+         const productPrice = parseInt(card.querySelector('.productPrice').innerText);
+
+        allProductInfo = {
+            name:productName,
+            brand: brandName,
+            price: parseInt(productPrice),
+            quantity: 1
+         }
+         addToCart(allProductInfo)
          
          
          
       })
      })
-</script>
 
+     function addToCart(allProductInfo) {
+       
+        const existingItem = output.find(item=> item.name===allProductInfo.name)
+        if(existingItem){
+            existingItem.quantity++;
+        }
+        else{
+            output.push(allProductInfo)
+        }
+        console.log(output)
+
+     }
+     
+</script>
 </body>
 </html>
