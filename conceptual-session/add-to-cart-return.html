@@ -60,6 +60,14 @@
     
 </section>
 
+<div id="outputSection">
+    <p  id="tQuantity"></p>
+    <p id="tprice"></p>
+
+
+
+</div>
+
 <script>
      const buttons = document.querySelectorAll('.buy-now-btn');
    const output =[];
@@ -94,7 +102,34 @@
         else{
             output.push(allProductInfo)
         }
-        console.log(output)
+
+        
+        updatedCart()
+        
+
+     }
+
+     const outputDiv = document.getElementById('outputSection')
+     
+
+     function updatedCart(){
+        
+       let totatalPrice = 0;
+       let totalItems = 0;
+       output.forEach(item=>{
+        totatalPrice = totatalPrice + (item.price*item.quantity);
+
+        const tp = document.getElementById('tprice')
+
+        tp.innerText = parseInt(totatalPrice)
+        
+
+
+       })
+
+       
+      
+
 
      }
      
